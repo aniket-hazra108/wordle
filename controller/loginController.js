@@ -18,8 +18,7 @@ registrar.post('/startGame', (req,res)=>{
     */
    console.log(req.body);
     let response = {
-        isValidUserName : true ,//boolean true/false,
-        word:"world"
+        isValidUserName : true //boolean true/false,
     }
     res.json(response);
 });
