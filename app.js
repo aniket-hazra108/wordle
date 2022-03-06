@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 8080 ;
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+
+
 
 app.get('/', (req,res)=>{
     res.send("Hello");
@@ -11,10 +14,9 @@ app.get('/', (req,res)=>{
 
 
 
-
-app.listen(process.env.port||8000, (err)=>{
+app.listen(PORT, (err)=>{
     if(err)
         console.log(err)
     else
-        console.log(8080);
+        console.log(PORT);
 });
